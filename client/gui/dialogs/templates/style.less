@@ -1,0 +1,866 @@
+body {
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  overflow: hidden;
+}
+
+.ui {
+  color: white;
+  font-family: 'Tahoma';
+  font-size: small;
+  cursor: default;
+  z-index: 0;
+
+  .tooltip {
+    .panel;
+    background-color: rgba(30, 30, 30, 0.8);
+    width: 250px;
+    z-index: 999;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    pointer-events: none;
+
+    .name {
+      font-weight: bold;
+    }
+  }
+
+  /* Some helper classes */
+  .flex-horizontal {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .flex-vertical {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flex-stretch {
+    align-items: stretch;
+  }
+
+  .flex-center {
+    align-items: center;
+  }
+
+  .flex-fill {
+    flex: 1;
+  }
+
+  .flex-fill-1 {
+    flex: 2;
+  }
+
+  .flex-fill-2 {
+    flex: 2;
+  }
+
+  .seperator {
+    clear: both;
+    margin-bottom: 5px;
+  }
+
+  .seperator10 {
+    clear: both;
+    height: 10px;
+  }
+
+  .seperator15 {
+    clear: both;
+    height: 15px;
+  }
+
+  .vertical-scroll {
+    overflow-y: auto;
+  }
+
+  .titleText {
+    width: 100%;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  }
+
+  /* Generic UI panel */
+  .panel {
+    background-color: rgba(40, 40, 40, 0.4);
+    border: 1px solid #777;
+    box-shadow: inset 0px 0px 3px #000;
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
+    box-sizing: border-box;
+  }
+
+  /* Dialog */
+  .dialog {
+    .panel;
+    display: flex;
+    flex-flow: column;
+    position: absolute;
+    background-color: rgba(50, 50, 50, 0.7);
+    border: 1px solid #000;
+    box-shadow: inset 0px 0px 3px #ffffff, 0px 0px 8px #000;
+
+    .titlebar {
+      .titleText;
+      width: 100%;
+      height: 20px;
+      border-bottom: 1px solid #aaa;
+      margin-top: -5px;
+      margin-left: -5px;
+      margin-bottom: 5px;
+      padding-top: 7px;
+      padding-left: 8px;
+      padding-right: 2px;
+    }
+
+    .button.close {
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  /* Button element */
+  .button {
+    background: linear-gradient(to bottom, rgb(140, 88, 69) 0%, rgb(140, 88, 69) 49%, rgb(105, 40, 20) 51%, rgb(105, 40, 20) 100%);
+    border-radius: 5px;
+    border: 1px solid #252525;
+    box-shadow: inset 0px 0px 3px #c0a59b;
+    box-sizing: border-box;
+    height: 22px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 19px;
+    cursor: pointer;
+    .flex-horizontal;
+    .flex-center;
+
+    .text {
+      .flex-fill;
+      margin-top: -1px;
+    }
+
+    &:hover {
+      background: linear-gradient(to bottom, rgb(145, 80, 69) 0%, rgb(145, 80, 6) 49%, rgb(135, 40, 10) 51%, rgb(135, 40, 10) 100%);
+      box-shadow: inset 0px 0px 5px rgb(215, 130, 105), 0px 0px 3px rgb(150, 45, 20);
+      border: 1px solid rgb(190, 105, 100);
+    }
+
+    &:active, &.active {
+      background: linear-gradient(to bottom, rgb(120, 70, 60) 0%, rgb(130, 75, 60) 49%, rgb(102, 25, 1) 51%, rgb(140, 40, 10) 100%);
+      box-shadow: inset 0px 0px 10px rgb(180, 35, 10), 0px 0px 5px rgb(150, 45, 40);
+      border: 1px solid rgb(210, 120, 105);
+    }
+  }
+
+  .button.grey {
+    background: linear-gradient(to bottom, rgb(150, 150, 150) 0%, rgb(140, 140, 140) 49%, rgb(130, 130, 130) 51%, rgb(110, 110, 110) 100%);
+
+    &:hover {
+      background: linear-gradient(to bottom, rgb(160, 160, 160) 0%, rgb(150, 150, 150) 49%, rgb(140, 140, 140) 51%, rgb(120, 120, 120) 100%);
+      box-shadow: inset 0px 0px 5px rgb(210, 210, 210), 0px 0px 3px rgb(190, 190, 190);
+      border: 1px solid rgb(190, 190, 190);
+    }
+
+    &:active, &.active {
+      background: linear-gradient(to bottom, rgb(120, 120, 120) 0%, rgb(130, 130, 130) 49%, rgb(102, 102, 102) 51%, rgb(140, 140, 140) 100%);
+      box-shadow: inset 0px 0px 5px rgb(190, 190, 190), 0px 0px 3px rgb(170, 170, 170);
+      border: 1px solid rgb(190, 190, 190);
+    }
+  }
+
+  .button.black {
+    background: linear-gradient(to bottom, rgb(60, 60, 60) 0%, rgb(35, 35, 35) 49%, rgb(25, 25, 25) 51%, rgb(15, 15, 15) 100%);
+    box-shadow: inset 0px 0px 3px #808080;
+
+    &:hover {
+      background: linear-gradient(to bottom, rgb(110, 110, 110) 0%, rgb(85, 85, 85) 49%, rgb(75, 75, 75) 51%, rgb(65, 65, 65) 100%);
+      box-shadow: inset 0px 0px 5px rgb(130, 130, 130), 0px 0px 3px rgb(110, 110, 110);
+      border: 1px solid rgb(70, 70, 70);
+    }
+
+    &:active, &.active {
+      background: linear-gradient(to bottom, rgb(30, 30, 30) 0%, rgb(25, 25, 25) 49%, rgb(15, 15, 15) 51%, rgb(15, 15, 15) 100%);
+      box-shadow: inset 0px 0px 9px rgb(140, 140, 140), 0px 0px 3px rgb(120, 120, 120);
+      border: 1px solid rgb(80, 80, 80);
+    }
+  }
+
+  /* Tabs Element */
+  .tabpanel.horizontal {
+    .flex-vertical;
+    .flex-stretch;
+
+    & > .header {
+      .flex-horizontal;
+      z-index: 1;
+
+      .button {
+        .flex-fill;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        border-bottom: 0px;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+
+    & > .tab {
+      .flex-fill;
+      .panel;
+      border-top-right-radius: 0px;
+      border-top-left-radius: 0px;
+      margin-top: -1px;
+    }
+  }
+
+  .tabpanel.vertical {
+    .flex-horizontal;
+    .flex-stretch;
+
+    & > .header {
+      .flex-vertical;
+      z-index: 1;
+
+      .button {
+        border-bottom-right-radius: 0px;
+        border-top-right-radius: 0px;
+        border-right: 0px;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+
+    & > .tab {
+      .flex-fill;
+      .panel;
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+      margin-left: -1px;
+    }
+  }
+
+  /* Item/Skill Slot Element */
+  .slot {
+    .panel;
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    padding: 0 0 0 0;
+    margin: 2px 2px 2px 2px;
+  }
+
+  .icon {
+    position: absolute;
+    margin-top: -1px;
+    margin-left: -1px;
+    width: 40px;
+    height: 40px;
+
+    .quantity {
+        display: inline;
+        position: absolute;
+        text-align: center;
+        background-color: rgba(20, 20, 20, 0.7);
+        right: 0;
+        bottom: 0;
+        min-width: 15px;
+        padding-left: 2px;
+        padding-right: 2px;
+        margin-bottom: -1px;
+        margin-right: -1px;
+      }
+  }
+
+  /* Textbox Widget */
+  .textbox {
+    .panel;
+    color: white;
+  }
+
+  /* List Element */
+  .list {
+    .panel;
+    overflow-y: auto;
+
+    .selected {
+      color: yellow;
+      background: rgba(40, 40, 40, 0.65);
+    }
+
+    .listitem {
+      padding: 3px 3px 3px 3px;
+      margin-bottom: 3px;
+
+      *:last-child {
+        margin-bottom: 0px;
+      }
+    }
+
+    .listitem:hover {
+      .selected;
+    }
+  }
+
+  /* Progressbar Element */
+  .progressbar {
+    height: 1.5em;
+    line-height: 1.5em;
+    border-radius: 2px;
+    border: 1px solid #252525;
+    box-shadow: inset 0px 0px 4px rgba(255, 255, 255, 0.6);
+    background: linear-gradient(to bottom,
+      rgba(120, 120, 120, 0.7) 0%, rgba(100, 100, 100, 0.7) 49%,
+      rgba(80, 80, 80, 0.7) 51%, rgba(60, 60, 60, 0.7) 100%);
+
+    .bar {
+      top: 0;
+      left: 0;
+      height: 100%;
+      margin-right: -100%;
+      display: inline;
+      float: left;
+      border-radius: 2px;
+      box-shadow: inset 0px 0px 4px rgba(255, 255, 255, 0.6);
+    }
+
+    .text {
+      display: flex;
+      width: 100%;
+      float: left;
+
+      .label.absolute {
+        flex: 1;
+        text-align: right;
+        padding-right: 5px;
+      }
+
+      .spacer {
+        padding-right: 5px;
+      }
+
+      .label.percent {
+        padding-right: 5px;
+      }
+    }
+  }
+
+  /* Some default colours for progress bar */
+  .progressbar.health > .bar {
+    background: rgba(255, 0, 0, 0.5);
+  }
+
+  .progressbar.mana > .bar {
+    background: rgba(0, 0, 255, 0.5);
+  }
+
+  .progressbar.exp > .bar {
+    background: rgba(200, 200, 0, 0.45);
+  }
+
+  /* Checkbox Element */
+  .checkbox:before {
+    content: '';
+    display: inline-block;
+    background: linear-gradient(to bottom,
+      rgba(120, 120, 120, 0.7) 0%, rgba(100, 100, 100, 0.7) 49%,
+      rgba(80, 80, 80, 0.7) 51%, rgba(60, 60, 60, 0.7) 100%);
+      border-radius: 5px;
+      border: 1px solid #252525;
+      box-shadow: inset 0px 0px 3px #c0a59b;
+      box-sizing: border-box;
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      vertical-align: middle;
+      line-height: 18px;
+      margin-right: 5px;
+  }
+
+  .checkbox:hover:before {
+    background: linear-gradient(to bottom,
+      rgba(160, 160, 160, 0.7) 0%, rgba(140, 140, 140, 0.7) 49%,
+      rgba(120, 120, 120, 0.7) 51%, rgba(100, 100, 100, 0.7) 100%);
+  }
+
+  .checkbox:active:before {
+    background: linear-gradient(to bottom,
+      rgba(100, 100, 100, 0.7) 0%, rgba(80, 80, 80, 0.7) 49%,
+      rgba(60, 60, 60, 0.7) 51%, rgba(40, 40, 40, 0.7) 100%);
+  }
+
+  .checkbox.checked:before {
+    content: 'X';
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    color: white;
+  }
+
+  /* dlgStatus */
+  .dialog.status {
+    left: 50%;
+    bottom: 10%;
+    margin-left: -200px;
+    width: 400px;
+    text-align: center;
+  }
+
+  /* Login Dialog */
+  .dialog.login {
+    width: 280px;
+
+    .textbox {
+      width: 100%;
+    }
+
+    .checkbox.remember {
+      margin: 0 auto;
+      width: 120px;
+    }
+  }
+
+  /* dlgServerSelect */
+  .dialog.server-select {
+    width: 250px;
+    height: 300px;
+  }
+
+  /* dlgCharacterSelect */
+  .dialog.character-select {
+    top: 10%;
+    right: 10%;
+    height: 80%;
+    width: 250px;
+    align-items: center;
+
+    .list.characters {
+      width: 100%;
+    }
+
+    .button {
+      width: 70%;
+    }
+  }
+
+  /* dlgCharacterCreate */
+  .dialog.character-create {
+    width: 250px;
+    right: 7.5%;
+    top: ~"calc(50% - 200px)";
+
+    .input.name {
+      width: 100%;
+    }
+
+    .button.prev, .button.next {
+      width: 30px;
+    }
+
+    .label.category {
+      margin-bottom: 2px;
+      margin-top: 5px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .label.gender, .label.face, .label.hair-style, .label.hair-color {
+      .panel;
+      padding-top: 2px;
+      text-align: center;
+      height: 22px;
+    }
+  }
+
+  /* dlgMenu */
+  .dialog.menu {
+    right: 10px;
+    bottom: 10px;
+    width: 100px;
+
+    .button {
+      margin-bottom: 5px;
+    }
+  }
+
+  /* dlgCharacterStatus */
+  .dialog.character-status {
+    top: 10px;
+    left: 10px;
+
+    .label.name {
+      .titleText;
+      padding-bottom: 3px;
+    }
+
+    .progressbar.health {
+      width: 200px;
+    }
+
+    .progressbar.mana {
+      width: 200px;
+    }
+
+    .progressbar.exp {
+      width: 200px;
+      height: 0.5em;
+
+      border-radius: 2px;
+      background-size: 10% 100%;
+      background-position: 1px 0px;
+      background-image: linear-gradient(to right,
+        rgba(150, 150, 100, 0.4) 90%,
+        rgba(0, 0, 0, .5) 10%);
+    }
+  }
+
+  /* dlgCharacter */
+  .dialog.character {
+    top: 100px;
+    left: 500px;
+
+    .stat-row {
+      .flex-horizontal;
+      .flex-center;
+    }
+
+    .stat-column {
+      margin-right: 5px;
+
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+
+    .stat {
+      .flex-horizontal;
+      .flex-center;
+      margin-bottom: 2px;
+
+      .value {
+        .flex-fill;
+        background-color: rgba(40, 40, 40, 0.5);
+        border-radius: 4px;
+        text-align: center;
+        height: 1.3em;
+      }
+
+      .label.cost {
+        min-width: 20px;
+        margin-right: 5px;
+        text-align: right;
+      }
+
+      .button.levelup {
+        min-width: 20px;
+        height: 20px;
+        margin-right: 5px;
+      }
+
+      .progressbar {
+        .flex-fill;
+        height: 1.5em !important;
+      }
+    }
+
+    .stat-row.long-stats {
+      align-items: baseline;
+
+      .stat-column {
+        min-width: 160px;
+
+        &:first-child {
+          min-width: 140px;
+        }
+
+        .stat {
+          .type {
+            min-width: 100px;
+          }
+        }
+      }
+    }
+
+    .stat.level, .stat.job, .stat.clan,
+    .stat.health, .stat.mana, .stat.exp {
+      .type {
+        min-width: 35px !important;
+      }
+    }
+
+    .stat.strength, .stat.dexterity, .stat.intelligence,
+    .stat.concentration, .stat.charm, .stat.sense {
+      .type {
+        min-width: 35px !important;
+      }
+    }
+  }
+
+  /* dlgQuestList */
+  .dialog.quest-list {
+    width: 300px;
+
+    .list.quests {
+      height: 100px;
+    }
+
+    .items {
+      margin-right: 5px;
+    }
+
+    .label.description {
+      .panel;
+      .vertical-scroll;
+    }
+
+    .footer {
+      margin-top: 6px;
+    }
+
+    .button.abandon {
+      width: 100px;
+    }
+
+    .label.timer {
+      text-align: center;
+    }
+  }
+
+  /* dlgNpcChat */
+  .dialog.npcchat {
+    width: 450px;
+    top: 30%;
+    left: ~"calc(50% - 225px)";
+
+    .label.message {
+      .panel;
+      min-height: 80px;
+    }
+
+    .list.options > div {
+      cursor: pointer;
+    }
+  }
+
+  /* dlgMessageBox */
+  .dialog.message-box {
+    width: 300px;
+    min-height: 150px;
+
+    .button-area {
+      font-size: 0;
+
+      .button {
+        .flex-fill;
+        margin-right: 5px;
+        font-size: small;
+
+        &:last-child {
+          margin-right: 0px;
+        }
+      }
+    }
+  }
+
+  /* dlgQuickBar */
+  .dialog.quickbar {
+    .flex-horizontal;
+    bottom: 10px;
+  }
+
+  /* dlgParty */
+  .dialog.party {
+    .label.level {
+      min-width: 80px;
+    }
+
+    .partymember {
+      .flex-horizontal;
+
+      .label.name {
+        min-width: 90px;
+      }
+
+      .progressbar.health {
+        min-width: 150px;
+        color: white !important;
+      }
+    }
+  }
+
+  .dialog.skills {
+    .slot {
+      margin: 5px 5px 5px 5px;
+    }
+
+    .skill-panel {
+      width: 352px;
+    }
+  }
+
+  /* dlgChatBox */
+  .dialog.chatbox {
+    width: 450px;
+    left: 10px;
+    bottom: 10px;
+
+    .system.messages {
+      height: 80px;
+    }
+
+    .game.messages {
+      height: 170px;
+    }
+
+    .label.messages {
+      .panel;
+      .vertical-scroll;
+
+      .say {
+        color: rgb(255, 255, 255);
+      }
+
+      .shout {
+        color: rgb(189, 250, 255);
+      }
+
+      .whisper {
+        color: rgb(201, 255, 144);
+      }
+
+      .trade {
+        .say;
+      }
+
+      .clan {
+        color: rgb(255, 228, 122);
+      }
+
+      .ally {
+        .clan;
+      }
+
+      .party {
+        color: rgb(255, 237, 140);
+      }
+
+      .system {
+        color: rgb(255,224,229);
+      }
+
+      .notice {
+        color: rgb(255, 188, 172);
+      }
+
+      .error {
+        color: rgb(255, 0, 0);
+      }
+
+      .quest {
+        color: rgb(151, 221, 241);
+      }
+
+      .quest-reward {
+        color: rgb(224, 162, 209);
+      }
+    }
+
+    .radiogroup.chat-type {
+      .flex-horizontal;
+      font-size: 0;
+
+      .button {
+        .flex-fill;
+        margin-right: 5px;
+        font-size: small;
+
+        &:last-child {
+          margin-right: 0px;
+        }
+      }
+    }
+
+    .button.send {
+      width: 50px;
+      height: inherit;
+      margin-left: 5px;
+    }
+  }
+
+  .dialog.debug {
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    top: -2px;
+    right: 10px;
+    min-width: 200px;
+
+    .panel.controls {
+      box-shadow: inset 0px 0px 3px #ffffff;
+      background-color: rgba(50, 50, 50, 0.7);
+      border: 1px solid #000;
+      border-radius: 0;
+
+      .button {
+        border-radius: 0;
+        margin-top: -1px;
+        height: 24px;
+        text-align: left;
+        padding-left: 5px;
+      }
+
+      *:first-child {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        margin-top: 0px;
+      }
+
+      *:last-child {
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+    }
+
+    .button.toggle-controls {
+      margin-top: -1px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
+}
+
+.generate-item-iconsheets-single-digit(9);
+.generate-item-iconsheets-double-digit(49);
+
+.generate-item-iconsheets-single-digit(@n, @i: 1) when (@i =< @n) {
+  .item-iconsheet-@{i} {
+    background: url('//rbimg.br19.com/ICON0@{i}.png');
+  }
+  .generate-item-iconsheets-single-digit(@n, (@i + 1));
+}
+
+.generate-item-iconsheets-double-digit(@n, @i: 10) when (@i =< @n) {
+  .item-iconsheet-@{i} {
+    background: url('//rbimg.br19.com/ICON@{i}.png');
+  }
+  .generate-item-iconsheets-double-digit(@n, (@i + 1));
+}
+
+.generate-skill-iconsheets-single-digit(9);
+
+.generate-skill-iconsheets-single-digit(@n, @i: 1) when (@i =< @n) {
+  .skill-iconsheet-@{i} {
+    background: url('//rbimg.br19.com/SKILL0@{i}.png');
+  }
+  .generate-skill-iconsheets-single-digit(@n, (@i + 1));
+}

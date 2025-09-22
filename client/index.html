@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <title>ROSE Online</title>
+        <link rel="shortcut icon" href="favicon.ico" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+        />
+        <style>
+            html,
+            body,
+            head {
+                margin: 0px;
+                padding: 0px;
+                overflow: none;
+            }
+            canvas {
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div
+            id="loadScreen"
+            style="
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                width: 100%;
+                height: 100%;
+                background-color: slategrey;
+                text-align: center;
+            "
+        >
+            <img
+                src="ROSE Online/3ddata/CONTROL/LOADING/JUNON.JPG"
+                style="height: 100%"
+            />
+        </div>
+
+        <!-- Config from Server -->
+        <script src="/config"></script>
+
+        <!-- Various needed utilities -->
+        <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/md5.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="js/lua+parser.min.js"></script>
+        <script src="js/three.js"></script>
+        <script src="js/stats.min.js"></script>
+        <script src="socket.io/socket.io.js"></script>
+
+        <!-- GUI Stuff -->
+        <link rel="stylesheet" href="gui/dialogs/templates/style.less" />
+
+        <script type="text/javascript">
+            // Build a list of parameters passed
+            var clientParams = [];
+            if (window.location.hash.length > 1) {
+                clientParams = window.location.hash.substr(1).split(",");
+            }
+            // Generate option changes based on this.
+            for (var i = 0; i < clientParams.length; ++i) {
+                var param = clientParams[i];
+                var paramEqIdx = param.indexOf("=");
+                if (paramEqIdx === -1) {
+                    config[param] = true;
+                } else {
+                    var paramName = param.substr(0, paramEqIdx);
+                    var paramVal = param.substr(paramEqIdx + 1);
+                    config[paramName] = paramVal;
+                }
+            }
+
+            var global = window;
+        </script>
+
+        <!-- Game Script Bundle -->
+        <script src="bundle.js"></script>
+
+        <!-- Game Core -->
+        <script src="js/core.js"></script>
+
+        <div
+            style="
+                position: absolute;
+                left: 6px;
+                bottom: 4px;
+                background-color: #aaa;
+                padding: 1px 2px;
+                border-radius: 4px;
+                font-family: Tahoma, Geneva, sans-serif;
+                font-size: 0.8em;
+            "
+        >
+            <b>Warning:</b>
+            Due to browser limitations, network data is tunneled through an
+            intermediate server.
+        </div>
+    </body>
+</html>
