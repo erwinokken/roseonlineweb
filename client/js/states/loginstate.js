@@ -90,8 +90,8 @@ LoginState.prototype.enter = function() {
   LoadScreen.hide();
 
   this.world = new MapManager();
-  this.world.rootObj.position.set(5200, 5200, 0);
-  this.world.setMap(7, function() {
+  this.world.rootObj.position.set(0, 0, 0); // 5200 5200
+  this.world.setMap(1, function() { // TODO: This was 7, but then it got an error. With 1 it works but then its not the correct one
     console.log('Map Ready');
     self.world.setViewerInfo(null);
   });

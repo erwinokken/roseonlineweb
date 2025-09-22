@@ -289,14 +289,13 @@ Mesh.prototype.createBufferGeometry = function() {
  * @param {Mesh~onLoad} callback
  */
 Mesh.load = function(path, callback) {
-  console.log('path', path);
+  
   ROSELoader.load(path, function(rh) {
     var version, magic, mesh;
 
     magic = rh.readStrLen(7);
     rh.skip(1);
 
-    console.log('magic is', magic);
     if (magic === 'ZMS0005') {
       version = 5;
     } else if (magic === 'ZMS0006') {
