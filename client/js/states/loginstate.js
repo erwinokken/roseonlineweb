@@ -90,8 +90,59 @@ LoginState.prototype.enter = function() {
   LoadScreen.hide();
 
   this.world = new MapManager();
-  this.world.rootObj.position.set(0, 0, 0); // 5200 5200
-  this.world.setMap(1, function() { // TODO: This was 7, but then it got an error. With 1 it works but then its not the correct one
+  this.world.rootObj.position.set(5200, 5200, 0); // 5200 5200
+  global.world = this.world;
+
+  // 1 = Zant
+  // 2 = Junon
+  // 3 = Turtle Beach? Event?
+  // 4 = Junon Event
+  // 5 = Junon PVP 1?
+  // 6 = Junon PVP 2
+  // 7 = Junon PVP 3 (Broken?)
+  // 8 = Junon PVP 4
+  // 9 = Junon PVP 5
+
+  // 10 = Error (EventObj)
+  // 11 = Was dit Junon ClanField?
+  // 12 = Error (leeg)
+  // 13 = Error (404)
+  // 14 = Error (leeg)
+  // 15 = Lijkt op die plek met Asteroth King
+  // 16 = Error (Eldeon 404)
+  // 17 = Error (leeg)
+  // 18 = Error (leeg)
+
+
+  // 19 = Junon Boat
+  // 20 = Birth Island
+  // 21 = Canyon of Elverloon Desert of wat was het? Vlak voordat je Zant in gaat
+  // 22 = Adventure Plains
+  // 23 = Die na Adventure Plains (of naast)
+  // 24 = Elverloon desert ofzo?
+  // 25 = Die andere plek met Aqua kings waar niemand komt :-P
+  // 26 = Groen met mushrooms?
+  // 27 = Beach met 2nd job Kreeft King
+  // 28 = Error (404, Canyon)
+  // 29 = Error (half leeg)
+  // 30 = Error (leeg)
+  // 31 = Error (Dungeon Junon Goblin Cave, iets met licht)
+  // 32 = Error (zelfde error)
+  // 33 = Error (zelfde)
+  // 34, 35, 36, 37 = Error (corrupt?, leeg?)
+  // 38-50 = Error (leeg)
+  // Daarna nog paar Lunar en paar Eldeon
+
+  // INFO: mapId 7 werkt niet met mijn client
+  // Het lijkt erop dat dit een andere client is dan die zij gebruikten
+  // MIJN CLIENT:
+  // Want character select screen (4) wordt als TITLE aangeduid in de  huidige client STB.
+  // En die bevat die "junon table" waar je iemand uit kan kiezen en dan gaat de camera naar boven via het "gat"
+
+  // Wat zij lijken te hebben op de screenshots:
+  // En op nieuwere videos zie ik dat ze eigenlijk gewoon op adventure plains zijn.
+  // Dat char select al een plek in Adventure Plains is.
+  this.world.setMap(4, function() { // 7
     console.log('Map Ready');
     self.world.setViewerInfo(null);
   });
@@ -117,7 +168,7 @@ LoginState.prototype._doneLogin = function(rUser, rPass) {
   waitDialog.setMessage('Connecting...');
 
   netLogin = new LoginClient();
-  netLogin.connect(serverIp, 4040, function(err) {
+  netLogin.connect(serverIp, 29000, function(err) {
     waitDialog.setMessage('Authenticating...');
 
     netLogin.login(rUser, rPass, function (data) {

@@ -27,10 +27,10 @@ GameTestState.prototype.enter = function() {
 
   // Help out by setting some initial but blank entries.
   if (!rUser) {
-    localStorage.setItem('autologin_user', '');
+    localStorage.setItem('autologin_user', 'test');
   }
   if (!rPass) {
-    localStorage.setItem('autologin_pass', '');
+    localStorage.setItem('autologin_pass', 'test');
   }
   if (!rServer) {
     localStorage.setItem('autologin_server', '1Draconis');

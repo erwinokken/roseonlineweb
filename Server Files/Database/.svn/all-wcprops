@@ -1,0 +1,251 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/10/trunk/Server%20Files/Database
+END
+list_friend.sql
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/10/trunk/Server%20Files/Database/list_friend.sql
+END
+list_quest_qsd.sql
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/10/trunk/Server%20Files/Database/list_quest_qsd.sql
+END
+storage.sql
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/10/trunk/Server%20Files/Database/storage.sql
+END
+list_clan.sql
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/10/trunk/Server%20Files/Database/list_clan.sql
+END
+characters.sql
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/10/trunk/Server%20Files/Database/characters.sql
+END
+accounts.sql
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/10/trunk/Server%20Files/Database/accounts.sql
+END
+addon_pegasus.bat
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/10/trunk/Server%20Files/Database/addon_pegasus.bat
+END
+list_npcs_pegasus.sql
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/10/trunk/Server%20Files/Database/list_npcs_pegasus.sql
+END
+item_drops_and.sql
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/10/trunk/Server%20Files/Database/item_drops_and.sql
+END
+list_customgates.sql
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/10/trunk/Server%20Files/Database/list_customgates.sql
+END
+list_respawnzones.sql
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/10/trunk/Server%20Files/Database/list_respawnzones.sql
+END
+channels.sql
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/10/trunk/Server%20Files/Database/channels.sql
+END
+list_npcs_special.sql
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/10/trunk/Server%20Files/Database/list_npcs_special.sql
+END
+chest_data.sql
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/10/trunk/Server%20Files/Database/chest_data.sql
+END
+list_config.sql
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/10/trunk/Server%20Files/Database/list_config.sql
+END
+mileage.sql
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/10/trunk/Server%20Files/Database/mileage.sql
+END
+item_drops.sql
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/10/trunk/Server%20Files/Database/item_drops.sql
+END
+wishlist.sql
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/10/trunk/Server%20Files/Database/wishlist.sql
+END
+list_skillbooks.sql
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/10/trunk/Server%20Files/Database/list_skillbooks.sql
+END
+list_mobgroups.sql
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/10/trunk/Server%20Files/Database/list_mobgroups.sql
+END
+list_telegates.sql
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/10/trunk/Server%20Files/Database/list_telegates.sql
+END
+npc_data.sql
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/10/trunk/Server%20Files/Database/npc_data.sql
+END
+mail_list.sql
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/10/trunk/Server%20Files/Database/mail_list.sql
+END
+items.sql
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/10/trunk/Server%20Files/Database/items.sql
+END
+devrev360_to_devrevII.sql
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/10/trunk/Server%20Files/Database/devrev360_to_devrevII.sql
+END
+list_objects.sql
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/10/trunk/Server%20Files/Database/list_objects.sql
+END
+npc_data_sell.sql
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/10/trunk/Server%20Files/Database/npc_data_sell.sql
+END
+database_installer.bat
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/10/trunk/Server%20Files/Database/database_installer.bat
+END
+full_install.sql
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/10/trunk/Server%20Files/Database/full_install.sql
+END
+skills_data.sql
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/10/trunk/Server%20Files/Database/skills_data.sql
+END
+list_customevents.sql
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/10/trunk/Server%20Files/Database/list_customevents.sql
+END
+ban_list.sql
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/10/trunk/Server%20Files/Database/ban_list.sql
+END
+list_golist.sql
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/10/trunk/Server%20Files/Database/list_golist.sql
+END
+list_skills.sql
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/10/trunk/Server%20Files/Database/list_skills.sql
+END
+list_extra_stats.sql
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/10/trunk/Server%20Files/Database/list_extra_stats.sql
+END
+list_cart_cg.sql
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/10/trunk/Server%20Files/Database/list_cart_cg.sql
+END
+list_npcs.sql
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/10/trunk/Server%20Files/Database/list_npcs.sql
+END
+list_events.sql
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/10/trunk/Server%20Files/Database/list_events.sql
+END
+osrose_backup.sql
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/10/trunk/Server%20Files/Database/osrose_backup.sql
+END
+list_telegates_pegasus.sql
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/10/trunk/Server%20Files/Database/list_telegates_pegasus.sql
+END
+list_mobgroups_pegasus.sql
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/10/trunk/Server%20Files/Database/list_mobgroups_pegasus.sql
+END

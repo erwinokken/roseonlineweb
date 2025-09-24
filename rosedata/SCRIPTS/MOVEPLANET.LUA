@@ -47,7 +47,7 @@ end
 function ProcMovePlanetCutScene( iPlayTime )
 	
 	if iPlayTime > 560 then
-		SC_ChangeState( 11 );
+		SC_ChangeState( 12 );
 		bFadeIn = 0;
 		bWhiteFadeIn = 0;
 		bEndFadeOut = 0;	

@@ -125,3 +125,4 @@ function SE_WeatherEffect( iObject, iWeatherType )
 	end
 
 end
+

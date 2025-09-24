@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/10/trunk/Server%20Files/Common
+END
+SocketServer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/10/trunk/Server%20Files/Common/SocketServer.cpp
+END
+rosecrypt.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/10/trunk/Server%20Files/Common/rosecrypt.hpp
+END
+sockets.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/10/trunk/Server%20Files/Common/sockets.h
+END
+log.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/10/trunk/Server%20Files/Common/log.cpp
+END
+SocketBase.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/10/trunk/Server%20Files/Common/SocketBase.cpp
+END
+config.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/10/trunk/Server%20Files/Common/config.cpp
+END
+log.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/10/trunk/Server%20Files/Common/log.h
+END
+SocketClient.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/10/trunk/Server%20Files/Common/SocketClient.cpp
+END
+rosecrypt.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/10/trunk/Server%20Files/Common/rosecrypt.cpp
+END
+config.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/10/trunk/Server%20Files/Common/config.h
+END

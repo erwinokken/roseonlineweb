@@ -277,3 +277,381 @@ function OnSelectAvatarMotionEnd( name )
 	SC_SetAvatarMotionByIndex( name, 1 )
 end
 
+
+-- 퀘스트 상태 리턴하는 함수
+-- @return 0 : 해당 퀘스트 없음
+--         1 : 수행할수 있는 퀘스트가 있다
+--	   2 : 수행중인 퀘스트가 있다
+--	   3 : 완료한 퀘스트가 있다
+function SC_QF_GetNpcQuestStatus( npcindex )
+
+--코넬
+	if npcindex == 1001 then
+		-- 사라진 아이들 진행중
+		if SC_QF_findQuest( 202 ) >= 0 then
+		    return 2	
+		end
+
+		-- 사라진 아이들 종료
+		if SC_QF_findQuest( 212 ) >= 0 then
+		    return 3
+		end
+
+		-- 영혼의 결정석 최초 시작
+		if SC_QF_getEpisodeVAR(1) == 3 then
+		    return 1	
+		end
+
+		-- 영혼의 결정석 재시작
+		if SC_QF_findQuest( 215 ) == -1
+		  and SC_QF_findQuest( 216 ) == -1
+		  and SC_QF_findQuest( 217 ) == -1
+		  and SC_QF_findQuest( 218 ) == -1
+		  and SC_QF_findQuest( 219 ) == -1
+		  and SC_QF_findQuest( 220 ) == -1
+		  and SC_QF_getEpisodeVAR(1) == 6  then
+			    return 1
+		end
+
+		-- 영혼의 결정석 종료
+		if SC_QF_findQuest( 218 ) >= 0 then
+		    return 3
+		end
+	
+		return 0
+	end
+
+
+--레나
+	if npcindex == 1014 then
+		-- 사라진 아이들 진행중
+		if SC_QF_findQuest( 202 ) >= 0 then
+		    return 2	
+		end
+
+		-- 사라진 아이들 종료
+		if SC_QF_findQuest( 213 ) >= 0 then
+		    return 3
+		end
+
+		-- 영혼의 결정석 최초 시작
+		if SC_QF_getEpisodeVAR(1) == 4 then
+		    return 1	
+		end
+
+		-- 영혼의 결정석 재시작
+		if SC_QF_findQuest( 215 ) == -1
+		  and SC_QF_findQuest( 216 ) == -1
+		  and SC_QF_findQuest( 217 ) == -1
+		  and SC_QF_findQuest( 218 ) == -1
+		  and SC_QF_findQuest( 219 ) == -1
+		  and SC_QF_findQuest( 220 ) == -1
+		  and SC_QF_getEpisodeVAR(1) == 7  then
+			    return 1
+		end
+		-- 영혼의 결정석 종료
+		if SC_QF_findQuest( 219 ) >= 0 then
+		    return 3
+		end
+
+		return 0
+	end
+	
+--키누	
+	if npcindex == 1010 then
+		-- 사라진 아이들 진행중
+		if SC_QF_findQuest( 202 ) >= 0 then
+		    return 2	
+		end
+
+		-- 사라진 아이들 종료
+		if SC_QF_findQuest( 214 ) >= 0 then
+		    return 3
+		end
+
+		-- 영혼의 결정석 최초 시작
+		if SC_QF_getEpisodeVAR(1) == 5 then
+		    return 1	
+		end
+
+		-- 영혼의 결정석 재시작
+		if SC_QF_findQuest( 215 ) == -1
+		  and SC_QF_findQuest( 216 ) == -1
+		  and SC_QF_findQuest( 217 ) == -1
+		  and SC_QF_findQuest( 218 ) == -1
+		  and SC_QF_findQuest( 219 ) == -1
+		  and SC_QF_findQuest( 220 ) == -1
+		  and SC_QF_getEpisodeVAR(1) == 8  then
+			    return 1
+		end
+		-- 영혼의 결정석 종료
+		if SC_QF_findQuest( 220 ) >= 0 then
+		    return 3
+		end
+
+		return 0
+	end
+
+--람파	
+	if npcindex == 1016 then
+		-- 사라진 아이들 진행중
+		if SC_QF_findQuest( 203 ) >= 0 or 
+	           SC_QF_findQuest( 204 ) >= 0 or
+	           SC_QF_findQuest( 205 ) >= 0 then
+		    return 2	
+		end
+
+		return 0
+	end
+
+--스페로
+	if npcindex == 1011 then
+		-- 영혼의 결정석 진행중
+		if SC_QF_findQuest( 215 ) >= 0 then
+		    return 2	
+		end
+
+		return 0
+	end
+
+--트리테
+	if npcindex == 1006 then
+		-- 영혼의 결정석 진행중
+		if SC_QF_findQuest( 216 ) >= 0 or
+		   SC_QF_checkQuestCondition( "218_00" ) == 1 or 
+		   SC_QF_checkQuestCondition( "217_03" ) == 1 then
+		    return 2	
+		end
+
+		return 0
+	end
+
+--체니
+	if npcindex == 1018 then
+		-- 사라진 아이들 진행중
+		if SC_QF_findQuest( 206 ) >= 0 then
+		    return 2	
+		end
+
+		return 0
+	end
+
+--샤리
+	if npcindex == 1019 then
+		-- 사라진 아이들 진행중
+		if SC_QF_findQuest( 207 ) >= 0 then
+		    return 2	
+		end
+
+		return 0
+	end
+
+--아리사
+	if npcindex == 1020 then
+		-- 사라진 아이들 진행중
+		if SC_QF_findQuest( 208 ) >= 0 then
+		    return 2	
+		end
+
+		return 0
+	end
+
+-- 프란시
+	if npcindex == 1003 then
+	        -- 사라진 아이들 최초 시작
+		if SC_QF_checkQuestCondition( "202-00" ) == 1 then
+			 return 1	
+		end
+	
+		-- 사라진 아이들 재시작
+		if SC_QF_findQuest( 202 ) == -1
+		  and SC_QF_findQuest( 203 ) == -1
+		  and SC_QF_findQuest( 204 ) == -1
+		  and SC_QF_findQuest( 205 ) == -1
+		  and SC_QF_findQuest( 206 ) == -1
+		  and SC_QF_findQuest( 207 ) == -1
+		  and SC_QF_findQuest( 208 ) == -1
+		  and SC_QF_findQuest( 209 ) == -1
+		  and SC_QF_findQuest( 210 ) == -1
+		  and SC_QF_findQuest( 211 ) == -1
+		  and SC_QF_findQuest( 212 ) == -1
+		  and SC_QF_findQuest( 213 ) == -1
+		  and SC_QF_findQuest( 214 ) == -1
+		  and SC_QF_getEpisodeVAR(1) == 2  then
+			return 1
+		end
+
+		return 0
+	end
+
+--란크
+	if npcindex == 1034 then
+		-- 치유의 손 진행중
+		if SC_QF_checkQuestCondition( "107-01" ) == 1 then
+			 return 2	
+		end
+
+		return 0
+	end
+
+--포니
+	if npcindex == 1035 then
+		-- 치유의 손 진행중
+		if SC_QF_checkQuestCondition( "107-02" ) == 1 then
+			 return 2	
+		end
+
+		return 0
+	end
+
+--세이온
+	if npcindex == 1036 then
+		-- 공포의 전염병 진행중
+		if SC_QF_findQuest( 101 ) >= 0 then
+			 return 2	
+		end
+
+		return 0
+	end
+
+--마에드
+	if npcindex == 1037 then
+		-- 공포의 전염병 시작
+		if SC_QF_findQuest( 101 ) == -1
+		    and SC_QF_checkQuestCondition( "101-01" ) == 1 then
+			 return 1	
+		end
+
+		-- 공포의 전염병 재시작
+		if SC_QF_findQuest( 101 ) == -1
+		  and SC_QF_findQuest( 102 ) == -1
+		  and SC_QF_findQuest( 103 ) == -1
+		  and SC_QF_findQuest( 104 ) == -1
+		  and SC_QF_getEpisodeVAR(1) == 10  then
+			    return 1
+		  end
+
+		-- 공포의 전염병 진행중
+		if SC_QF_findQuest( 103 ) >= 0 or
+		   SC_QF_checkQuestCondition( "106-01" ) == 1 or 
+		   SC_QF_findQuest( 228 ) >= 0 then 
+			 return 2	
+		end
+
+		-- 공포의 전염병 완료		
+		if SC_QF_checkQuestCondition( "107-03" ) == 1 or 
+		   SC_QF_checkQuestCondition( "107-05" ) == 1 or 
+	           SC_QF_findQuest( 230 ) >= 0 then  
+			 return 3	
+		end
+	
+		-- 이카네스교의 흔적 재시작
+		if SC_QF_findQuest( 231 ) == -1   
+		  and SC_QF_findQuest( 232 ) == -1
+		  and SC_QF_findQuest( 233 ) == -1
+		  and SC_QF_getEpisodeVAR(1) == 14  then
+		    return 1
+		end
+
+		return 0
+	end
+
+--카리테
+	if npcindex == 1053 then
+		-- 공포의 전염병 완료
+		if SC_QF_findQuest( 104 ) >= 0 then 		   
+			 return 3	
+		end
+
+		-- 치유의 손 재시작
+		  if SC_QF_findQuest( 105 ) == -1   
+		  and SC_QF_findQuest( 106 ) == -1
+		  and SC_QF_findQuest( 107 ) == -1
+		  and SC_QF_getEpisodeVAR(1) == 11  then
+	               return 1
+		  end
+
+		-- 치유의 손 진행중
+		if SC_QF_findQuest( 104 ) >= 0 or
+	   	   SC_QF_checkQuestCondition( "106-02" ) == 1 or 
+		   SC_QF_checkQuestCondition( "105-01" ) == 1 or 
+		   SC_QF_findQuest( 223 ) >= 0 or    
+		   SC_QF_findQuest( 225 ) >= 0 or 
+                   SC_QF_findQuest( 227 ) >= 0 then
+			 return 2	
+		end
+
+		return 0
+	end
+
+--마에라드
+	if npcindex == 1032 then
+		-- 이카네스교의 흔적 진행중
+		if SC_QF_findQuest( 231 ) >= 0 then
+			 return 2	
+		end
+		
+		-- 이카네스교의 흔적 완료
+		if SC_QF_findQuest( 233 ) >= 0 then
+			 return 3	
+		end
+
+		return 0
+	end
+
+--패론
+	if npcindex == 1511 then
+		-- 이카네스교의 흔적 진행중
+		if SC_QF_findQuest( 232 ) >= 0 then
+			 return 2	
+		end
+
+		return 0
+	end
+
+--이츠
+	if npcindex == 1100 then
+		-- 이카네스교의 흔적 진행중
+		if SC_QF_findQuest( 233 ) >= 0 then
+			 return 2	
+		end
+
+		return 0
+	end
+
+--고다인
+	if npcindex == 1109 then
+		-- 이카네스교의 흔적 진행중
+		if SC_QF_findQuest( 232 ) >= 0 then
+			 return 2	
+		end
+
+		return 0
+	end
+
+--샤링
+	if npcindex == 1013 then
+		-- 붉은 복장의 남자 시작
+		if SC_QF_checkQuestCondition( "223-01" ) == 1 then
+		    return 1	
+		end
+
+		-- 붉은 복장의 남자 재시작  
+		if SC_QF_findQuest( 223 ) == -1   
+		  and SC_QF_findQuest( 224 ) == -1
+		  and SC_QF_findQuest( 225 ) == -1
+		  and SC_QF_findQuest( 226 ) == -1
+		  and SC_QF_findQuest( 227 ) == -1
+		  and SC_QF_findQuest( 228 ) == -1
+		  and SC_QF_findQuest( 229 ) == -1
+		  and SC_QF_findQuest( 230 ) == -1
+		  and SC_QF_getEpisodeVAR(1) == 13  then
+		    return 1
+		end
+	
+		return 0
+	end
+
+	return 0
+
+end

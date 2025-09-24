@@ -15,6 +15,11 @@ _DebugHelper.prototype.init = function() {
   debugGui.addButton('Log Camera', this.logCamera.bind(this));
   debugGui.addButton('Log Scene', this.logScene.bind(this));
   debugGui.addButton('Bounding Boxes', this.toggleBoundingBoxes.bind(this));
+
+  if (config.debug) {
+    this.toggleBoundingBoxes();
+    this.toggleDebugCamera();
+  }
 };
 
 /**

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/aip
+END
+AiConditions.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/aip/AiConditions.h
+END
+Aip.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/aip/Aip.cpp
+END
+AiActions.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/aip/AiActions.cpp
+END
+Aip.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/aip/Aip.h
+END
+AiActions.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/aip/AiActions.h
+END
+AiConditions.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/aip/AiConditions.cpp
+END

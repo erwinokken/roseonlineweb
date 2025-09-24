@@ -159,6 +159,7 @@ MapManager.prototype.setMap = function(mapIdx, callback) {
   self.textures = [];
 
   GDM.get('list_zone', 'list_sky', function (zoneTable, skyTable) {
+
     console.log('zoneTable', zoneTable);
     console.log('skyTable', skyTable);
     var mapRow = zoneTable.row(mapIdx);
@@ -167,11 +168,13 @@ MapManager.prototype.setMap = function(mapIdx, callback) {
     var skyIdx = mapRow[ZONE_TABLE.BG_IMAGE];
     console.log('skyIdx', skyIdx);
 
-    if (!skyIdx || !skyTable.row(skyIdx)) {
+    var skyRow = skyTable.row(skyIdx);
+
+    if (!skyIdx || !skyRow) {
       console.log('Error loading sky', skyIdx, skyTable.row(skyIdx))
       return;
     } else {
-      self.loadSky(skyTable.row(skyIdx));
+      self.loadSky(skyRow);
     }
 
     self.DM.register('cnstmdls', ModelListManager, mapRow[ZONE_TABLE.CNST_TABLE]);

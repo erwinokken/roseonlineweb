@@ -3,6 +3,7 @@ default:
     local: 'D:/rosedata/'
     #remote: 'http://mywebsite.com:88/rosedata/'
   client:
+    debug: false
     disableNetLog: true
     disableGomLog: true
     disableLuaLog: true

@@ -123,6 +123,7 @@ WorldClient.prototype.deleteCharacter = function(index, name, doDelete, callback
 };
 
 WorldClient.prototype.createCharacter = function(name, gender, face, hairStyle, hairColor, callback) {
+  console.log('name', name, 'gender', gender, 'face', face, 'hairStyle', hairStyle, 'hairColor', hairColor)
   var opak = new RosePacket(0x713);
   opak.addUint8(gender);
   opak.addUint32(hairColor);

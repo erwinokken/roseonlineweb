@@ -1,0 +1,305 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/17/trunk/Server%20Files/World%20Server
+END
+stbhandler.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/stbhandler.h
+END
+character.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/character.cpp
+END
+Party.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/Party.cpp
+END
+ServerFunctions.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/ServerFunctions.cpp
+END
+WorldMonster.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/WorldMonster.cpp
+END
+player.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/player.h
+END
+quest.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/quest.cpp
+END
+worldpackets.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/17/trunk/Server%20Files/World%20Server/worldpackets.cpp
+END
+startup.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/startup.cpp
+END
+console.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/console.cpp
+END
+datatypes.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/datatypes.h
+END
+party.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/party.h
+END
+stlhandler.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/stlhandler.h
+END
+gmcmds.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/gmcmds.cpp
+END
+battle.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/battle.cpp
+END
+MonsterEvents.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/MonsterEvents.cpp
+END
+Signal.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/Signal.cpp
+END
+charevent.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/charevent.cpp
+END
+Buff.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/Buff.cpp
+END
+MainProcess.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/MainProcess.cpp
+END
+WorldServer.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/WorldServer.h
+END
+chartype.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/chartype.h
+END
+ltbhandler.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/ltbhandler.h
+END
+MonsterDamage.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/MonsterDamage.cpp
+END
+stbhandler.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/stbhandler.cpp
+END
+Monster.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/Monster.cpp
+END
+itemdata.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/itemdata.cpp
+END
+partyfunctions.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/partyfunctions.cpp
+END
+worldmap.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/worldmap.h
+END
+charstats.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/charstats.cpp
+END
+player.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/player.cpp
+END
+stlhandler.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/stlhandler.cpp
+END
+character.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/character.h
+END
+WorldMonster.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/WorldMonster.h
+END
+MonsterStats.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/MonsterStats.cpp
+END
+datatypes_compat.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/datatypes_compat.h
+END
+mapfunctions.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/mapfunctions.cpp
+END
+charfunctions.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/charfunctions.cpp
+END
+playerstats.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/playerstats.cpp
+END
+extrafunctions.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/extrafunctions.cpp
+END
+clan.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/clan.cpp
+END
+worldserver.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/worldserver.cpp
+END
+playerquest.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/playerquest.cpp
+END
+ltbhandler.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/ltbhandler.cpp
+END
+monsterfunctions.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/monsterfunctions.cpp
+END
+main.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/main.cpp
+END
+worldmap.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/worldmap.cpp
+END
+playerfunctions.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/playerfunctions.cpp
+END
+Worldprocess.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/Worldprocess.cpp
+END
+playerdata.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/playerdata.cpp
+END

@@ -23,8 +23,6 @@ if (!config.data || !(config.data.local || config.data.remote)) {
   process.exit(0);
 }
 
-
-
 http.globalAgent.maxSockets = 100;
 
 

@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/10/trunk/Server%20Files/Char%20Server
+END
+datatypes.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/10/trunk/Server%20Files/Char%20Server/datatypes.h
+END
+community.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/10/trunk/Server%20Files/Char%20Server/community.cpp
+END
+main.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/10/trunk/Server%20Files/Char%20Server/main.cpp
+END
+charserver.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/10/trunk/Server%20Files/Char%20Server/charserver.cpp
+END
+charpackets.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/10/trunk/Server%20Files/Char%20Server/charpackets.cpp
+END
+charserver.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/10/trunk/Server%20Files/Char%20Server/charserver.h
+END
+extrafunctions.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/10/trunk/Server%20Files/Char%20Server/extrafunctions.cpp
+END
+charclient.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/10/trunk/Server%20Files/Char%20Server/charclient.cpp
+END
+clan.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/10/trunk/Server%20Files/Char%20Server/clan.cpp
+END
+signal.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/10/trunk/Server%20Files/Char%20Server/signal.cpp
+END

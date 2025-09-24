@@ -34,16 +34,10 @@
 -- SC_RemoveCoordinatesIndicator ( index ) -- Add½Ã ¼³Á¤µÈ index
 
 
-
--- Tutorial 01
--- Ã³À½ Á¢¼Ó½Ã
-function Tutorial01( iOwnerIndex )	
-	SC_ShowNotifyMessage( 1 );
-end
-
 -- Tutorial 02
 -- 2 ·¹º§·Î ½Â±Þ
 function Tutorial02( iOwnerIndex )	
+	SC_ShowTutorialImage("3Ddata/Tutorial/11.dds", 180, 123, 0.3, 2.5, 3, 0);
 	SC_ShowNotifyMessage( 2 );
 	SC_OpenDialog ( DLG_TYPE_MENU )
 	SC_SetButtonBlink( DLG_TYPE_MENU, MENU_BTN_CHAR )
@@ -58,17 +52,16 @@ end
 -- Tutorial 04
 -- 2·¹º§ °æÇèÄ¡ 220 ÀÌ»óÀÌ µÇ¾úÀ»¶§
 function Tutorial04( iOwnerIndex )	
+	SC_ShowTutorialImage("3Ddata/Tutorial/12.dds", 180, 150, 0.3, 2.5, 3, 0);
 	SC_ShowNotifyMessage( 4 );
 	SC_OpenDialog ( DLG_TYPE_MENU )
-	SC_SetButtonBlink( DLG_TYPE_MENU, MENU_BTN_ITEM )
+	SC_SetButtonBlink( DLG_TYPE_MENU, MENU_BTN_SKILL )
 end
 
 -- Tutorial 05
 -- 3·¹º§·Î ½Â±Þ
 function Tutorial05( iOwnerIndex )	
 	SC_ShowNotifyMessage( 5 );
-	SC_OpenDialog ( DLG_TYPE_MENU )
-	SC_SetButtonBlink( DLG_TYPE_MENU, MENU_BTN_SKILL )
 end
 
 -- Tutorial 06
@@ -78,13 +71,15 @@ function Tutorial06( iOwnerIndex )
 end
 
 -- 5051 Äù½ºÆ®¸¦ ¹Þ¾ÒÀ»¶§ ¹öÆ° »ý¼º
-function Tutorial07button()	
+function Tutorial07button()
+	SC_ShowTutorialImage("3Ddata/Tutorial/08.dds", 6, 125, 0.3, 6.5, 7, 0);	
 	SC_CreateEventButton( 7 )
 end
 
 -- Tutorial 07
 -- 5051 Äù½ºÆ®¸¦ ¹Þ¾ÒÀ»¶§
 function Tutorial07( iOwnerIndex )	
+	SC_ShowTutorialImage("3Ddata/Tutorial/09.dds", 180, 183, 0.3, 2.5, 3, 0);
 	SC_ShowNotifyMessage( 7 );
 	SC_OpenDialog ( DLG_TYPE_MENU )
 	SC_SetButtonBlink( DLG_TYPE_MENU, MENU_BTN_QUEST )
@@ -98,34 +93,68 @@ end
 
 -- T-warp Æ®¸®°Å ¼öÇàÈÄ ¹öÆ° »ý¼º
 function Tutorial09button()	
-	SC_CreateEventButton( 9 )
+	SC_ShowTutorialImage("3Ddata/Tutorial/10.dds", 6, 125, 0.3, 14.5, 15, 0);
+-- Ã³À½ ¸ðÇè°¡ ¸¶À»·Î °¬À» ¶§ ºÎÈ° À§Ä¡ ÁöÁ¤
+	SC_GF_setRevivePosition(); 
+-- ºÎÈ° À§Ä¡ ÁöÁ¤ÀÌ µÇ¾ú´ÂÁö ¿ùµå½ºÀ§Ä¡·Î Ã¼Å©
+        SC_QF_doQuestTrigger( "t-warp-check" )
+
 end
-
--- Tutorial 09
--- T-warp Æ®¸®°Å ¼öÇàÈÄ Ú
-function Tutorial09( iOwnerIndex )	
-	SC_ShowNotifyMessage( 9 );
-end
-
--- Tutorial 10
--- 10·¹º§·Î ½Â±ÞÚ
-function Tutorial10( iOwnerIndex )	
-	SC_ShowNotifyMessage( 10 );
-end
-
-
 
 -- Notify 01
 function Notify01( iOwnerIndex )	
 	SC_ShowNotifyMessage( 3 );
 end
 
+-- HeroQuest01
+-- 1-Hero-01 Äù½ºÆ® ½ÃÀÛ(¾Æ·ç¾ÆÀÇ ¿äÁ¤ ´ëÈ­)
+function HeroQuest01( iOwnerIndex )	
+      if SC_QF_checkQuestCondition( "201-00" ) == 1 then
+  	 	SC_QF_doQuestTrigger( "201-00" )
+      end 
+end
 
+-- HeroQuest01
+-- 1-Hero-01 Äù½ºÆ® Á¾·á(´ÙÀ½ ¾Ë¸²¹öÆ° È£Ãâ)
+function HeroQuest01Button( iOwnerIndex )	
+     SC_CreateEventButton( 21 ) 
+end
 
+-- HeroQuest02
+-- 1-Hero-02 Äù½ºÆ® ½ÃÀÛ(¾Æ·ç¾ÆÀÇ ¿äÁ¤ ´ëÈ­)
+function HeroQuest02( iOwnerIndex )	
+      if SC_QF_checkQuestCondition( "100-00" ) == 1 then
+  	 	SC_QF_doQuestTrigger( "100-00" )
+      end 
+end
 
+-- HeroQuest02
+-- 1-Hero-02 Äù½ºÆ® Á¾·á(´ÙÀ½ ¾Ë¸²¹öÆ° È£Ãâ)
+function HeroQuest02Button( iOwnerIndex )	
+     SC_CreateEventButton( 22 ) 
+end
 
+-- HeroQuest03
+-- 1-Hero-03 Äù½ºÆ® ½ÃÀÛ(¾Æ·ç¾ÆÀÇ ¿äÁ¤ ´ëÈ­)
+function HeroQuest03( iOwnerIndex )	
+      if SC_QF_checkQuestCondition( "222-00" ) == 1 then
+  	 	SC_QF_doQuestTrigger( "222-00" )
+      end 
+end
 
+-- HeroQuest03
+-- 1-Hero-02 Äù½ºÆ® Á¾·á(ÃÖÁ¾ ¾Ë¸²¹öÆ° È£Ãâ)
+function HeroQuest03Button( iOwnerIndex )	
+     SC_CreateEventButton( 23 ) 
+end
 
+-- HeroQuest03
+-- 1-Hero-03 Äù½ºÆ® Á¾·á(¾Æ·ç¾ÆÀÇ ¿äÁ¤ ´ëÈ­)
+function HeroQuest03end( iOwnerIndex )	
+      if SC_QF_checkQuestCondition( "233-03" ) == 1 then
+  	 	SC_QF_doQuestTrigger( "233-03" )
+      end 
+end
 
 function InitTutorialEvent()
 	
@@ -133,24 +162,44 @@ end
 
 
 iPrevEXP = 0;
+iPrevLevel = 0;
 iInitPrevEXP = 0;
 iStartLevel1Event = 0;	-- 1·¾ °æÇèÄ¡0 ÀÏ¶§ ÀÌº¥Æ®¸¦ ¿©·¯¹ø ¹ß»ý½ÃÅ°Áö ¾Ê±â À§ÇØ.
+iStartHeroQuest = 0;    -- È÷¾î·Î Äù½ºÆ® ½ÃÀÛ ÀÌº¥Æ®¸¦ ¿©·¯¹ø ¹ß»ýÇÏÁö ¾Ê±â À§ÇØ. 
 
 -- CheckTutorialEvent
 function CheckTutorialEvent()
 
 	if iInitPrevEXP == 0 then
 		iPrevEXP = SC_GetAvatarEXP();
+		iPrevLevel = SC_GetAvatarLEVEL();
 		iInitPrevEXP = 1;
 	end
 
 	iAvatarExp 	= SC_GetAvatarEXP();
 	iAvatarLEVEL 	= SC_GetAvatarLEVEL();
+
+	-- È÷¾î·Î Äù½ºÆ® ½ÃÀÛ Ã¼Å©(1-Hero-01)
+	if (iStartHeroQuest == 0) and (SC_QF_checkQuestCondition( "201-00" ) == 1) 
+	then
+		SC_CreateEventButton( 20 ) -- È÷¾î·Î Äù½ºÆ® ½ÃÀÛ ¾Ë¸²¹öÆ° »ý¼º	 	
 	
+		iStartHeroQuest = 1
+	end
+
 	-- Ã³À½ Á¢¼Ó½Ã( 1·¹º§ °æÇèÄ¡ 0 )ÀÏ°æ¿ì
 	if ( iStartLevel1Event == 0 ) and ( iAvatarLEVEL == 1 ) and ( iAvatarExp == 0 ) then	
-		SC_CreateEventButton( 1 )
+		SC_ShowTutorialImage("3Ddata/Tutorial/01.dds", 6, 125, 0.3, 4.5, 5, 0);
+		SC_ShowTutorialImage("3Ddata/Tutorial/02.dds", 6, 125, 0.3, 9.5, 10, 1);
+
+		SC_GF_setRevivePosition() -- Ã³À½ ½ÃÀÛ½Ã ÇöÀç À§Ä¡(Åº»ýÀÇ ¼¶)·Î ºÎÈ° À§Ä¡ ÁöÁ¤
+
 		iStartLevel1Event = 1
+	end
+
+	--2 ·¹º§ÀÌ µÇ¾úÀ» ¶§
+	if ( iAvatarLEVEL == 2 ) and ( iPrevLevel < 2 ) then
+		SC_ShowTutorialImage("3Ddata/Tutorial/08.dds", 6, 125, 0.3, 14.5, 15, 0);
 	end
 	
 	--2 ·¹º§ °æÇèÄ¡ 150 ÀÌ»ó µÇ¾úÀ»¶§
@@ -163,15 +212,81 @@ function CheckTutorialEvent()
 		SC_CreateEventButton( 4 )
 	end
 	
-	--3 ·¹º§ °æÇèÄ¡ 220 ÀÌ»ó µÇ¾úÀ»¶§
+	--3 ·¹º§ °æÇèÄ¡ 100 ÀÌ»ó µÇ¾úÀ»¶§
 	if ( iAvatarLEVEL == 3 ) and ( iAvatarExp >= 100 ) and ( iPrevEXP < 100 ) then
-		SC_CreateEventButton( 6 )
+		SC_CreateEventButton( 6 );
+	end
+
+	
+	--4 ·¹º§ÀÌ µÇ¾úÀ» ¶§
+	if ( iAvatarLEVEL == 4 ) and ( iPrevLevel < 4 ) then
+		SC_ShowTutorialImage("3Ddata/Tutorial/13.dds", 6, 125, 0.3, 14.5, 15, 0);
+		
+		-- 3¹ø Æ©Åä¸®¾ó Äù½ºÆ® ½ÇÇà
+		  if SC_QF_checkQuestCondition( "Tutorial_3" ) == 1 then
+		  SC_QF_doQuestTrigger( "Tutorial_3" )
+		  end
 	end
 	
+	--5 ·¹º§ÀÌ µÇ¾úÀ» ¶§
+	if ( iAvatarLEVEL == 5 ) and ( iPrevLevel < 5 ) then
+		SC_ShowTutorialImage("3Ddata/Tutorial/13.dds", 6, 125, 0.3, 14.5, 15, 0);
+
+		-- 4¹ø Æ©Åä¸®¾ó Äù½ºÆ® ½ÇÇà
+		  if SC_QF_checkQuestCondition( "Tutorial_4" ) == 1 then
+		  SC_QF_doQuestTrigger( "Tutorial_4" )
+		  end
+	end
 	
+	--6 ·¹º§ÀÌ µÇ¾úÀ» ¶§
+	if ( iAvatarLEVEL == 6 ) and ( iPrevLevel < 6 ) then
+		SC_ShowTutorialImage("3Ddata/Tutorial/13.dds", 6, 125, 0.3, 14.5, 15, 0);
+	
+		-- 5¹ø Æ©Åä¸®¾ó Äù½ºÆ® ½ÇÇà
+		  if SC_QF_checkQuestCondition( "Tutorial_5" ) == 1 then
+		  SC_QF_doQuestTrigger( "Tutorial_5" )
+		  end
+	end
+	
+	--7 ·¹º§ÀÌ µÇ¾úÀ» ¶§
+	if ( iAvatarLEVEL == 7 ) and ( iPrevLevel < 7 ) then
+		SC_ShowTutorialImage("3Ddata/Tutorial/13.dds", 6, 125, 0.3, 14.5, 15, 0);
+
+		-- 6¹ø Æ©Åä¸®¾ó Äù½ºÆ® ½ÇÇà
+		  if SC_QF_checkQuestCondition( "Tutorial_6" ) == 1 then
+		  SC_QF_doQuestTrigger( "Tutorial_6" )
+		  end
+	end
 		
+	--8 ·¹º§ÀÌ µÇ¾úÀ» ¶§
+	if ( iAvatarLEVEL == 8 ) and ( iPrevLevel < 8 ) then
+		SC_ShowTutorialImage("3Ddata/Tutorial/13.dds", 6, 125, 0.3, 14.5, 15, 0);
+
+		-- 7¹ø Æ©Åä¸®¾ó Äù½ºÆ® ½ÇÇà
+		  if SC_QF_checkQuestCondition( "Tutorial_7" ) == 1 then
+		  SC_QF_doQuestTrigger( "Tutorial_7" )
+		  end
+	end
+		
+	--9 ·¹º§ÀÌ µÇ¾úÀ» ¶§
+	if ( iAvatarLEVEL == 9 ) and ( iPrevLevel < 9 ) then
+		SC_ShowTutorialImage("3Ddata/Tutorial/13.dds", 6, 125, 0.3, 14.5, 15, 0);
+
+		-- 8¹ø Æ©Åä¸®¾ó Äù½ºÆ® ½ÇÇà
+		  if SC_QF_checkQuestCondition( "Tutorial_8" ) == 1 then
+		  SC_QF_doQuestTrigger( "Tutorial_8" )
+		  end
+	end
+	
+	--10 ·¹º§ÀÌ µÇ¾úÀ» ¶§
+	if ( iAvatarLEVEL == 10 ) and ( iPrevLevel < 10 ) then
+		SC_ShowTutorialImage("3Ddata/Tutorial/14.dds", 6, 125, 0.3, 14.5, 15, 0);
+	end
+		
+	
 	-- ¸ðµç Ã³¸®ÈÄ iPrevEXP¸¦ ÇöÀç °æÇèÄ¡·Î ¼¼ÆÃÇØ¼­ ´ÙÀ½ ÇÁ·¹ÀÓ¿¡¼­ °æÇèÄ¡ÀÇ º¯È­¸¦ °üÂûÇÑ´Ù.
 	iPrevEXP = SC_GetAvatarEXP();
+ 	iPrevLevel = SC_GetAvatarLEVEL(); 
 end
 
 
@@ -187,54 +302,122 @@ end
 -- ¹ö¼¸ ¾Õ ÀÌº¥Æ®
 function mushroom( iObject, iState, bJustEnd )
 	iIndex = SC_GetEventObjectIndex( iObject );
-	SC_RunEventObjectEvent( iIndex, "3Ddata\\Event\\Object002.con", -1 );
+	SC_RunEventObjectEvent( 2200, "3Ddata\\Event\\Object002.con", -1 );
 end
 
 -- ¸ð·¡½Ã°è ÀÌº¥Æ®
 function sandglass( iObject, iState, bJustEnd )
 	iIndex = SC_GetEventObjectIndex( iObject );
-	SC_RunEventObjectEvent( iIndex, "3Ddata\\Event\\Object003.con", -1 );
+	SC_RunEventObjectEvent( 2200, "3Ddata\\Event\\Object003.con", -1 );
 end
 
 -- ¹«¼­¿î Ã¥ ÀÌº¥Æ®
 function horriblebook( iObject, iState, bJustEnd )
 	iIndex = SC_GetEventObjectIndex( iObject );
-	SC_RunEventObjectEvent( iIndex, "3Ddata\\Event\\Object004.con", -1 );
+	SC_RunEventObjectEvent( 2200, "3Ddata\\Event\\Object004.con", -1 );
 end
 
 -- ÇÇ¶ó¹Ìµå ÀÌº¥Æ®01
 function piramid01( iObject, iState, bJustEnd )
 	iIndex = SC_GetEventObjectIndex( iObject );
-	SC_RunEventObjectEvent( iIndex, "3Ddata\\Event\\Object005.con", -1 );	
+	SC_RunEventObjectEvent( 2200, "3Ddata\\Event\\Object005.con", -1 );	
 end
 
 -- ÇÇ¶ó¹Ìµå ÀÌº¥Æ®02
 function piramid02( iObject, iState, bJustEnd )
 	iIndex = SC_GetEventObjectIndex( iObject );
-	SC_RunEventObjectEvent( iIndex, "3Ddata\\Event\\Object006.con", -1 );
+	SC_RunEventObjectEvent( 2200, "3Ddata\\Event\\Object006.con", -1 );
 end
 
 -- ¿Ã»©¹ÌÀÇ ´«
 function owl( iObject, iState, bJustEnd )
 	iIndex = SC_GetEventObjectIndex( iObject );
-	SC_RunEventObjectEvent( iIndex, "3Ddata\\Event\\Object007.con", -1 );
+	SC_RunEventObjectEvent( 2200, "3Ddata\\Event\\Object007.con", -1 );
 end
 
 -- ÇÇ¶ó¹Ìµå ÀÌº¥Æ®03
 function piramid03( iObject, iState, bJustEnd )
 	iIndex = SC_GetEventObjectIndex( iObject );
-	SC_RunEventObjectEvent( iIndex, "3Ddata\\Event\\Object005.con", -1 );
+	SC_RunEventObjectEvent( 2200, "3Ddata\\Event\\Object005.con", -1 );
 end
 
 -- °í¿äÇÑ Çù°î ¸¶³ª
 function mana( iObject, iState, bJustEnd )
 	iIndex = SC_GetEventObjectIndex( iObject );
-	SC_RunEventObjectEvent( iIndex, "3Ddata\\Event\\Object008.con", -1 );
+	SC_RunEventObjectEvent( 2200, "3Ddata\\Event\\Object008.con", -1 );
 end
 
 -- °ÕÁö½ºÅæ
 function genzistone( iObject, iState, bJustEnd )
 	iIndex = SC_GetEventObjectIndex( iObject );
-	SC_RunEventObjectEvent( iIndex, "3Ddata\\Event\\Object009.con", -1 );
+	SC_RunEventObjectEvent( 2200, "3Ddata\\Event\\Object009.con", -1 );
 end
 
+-- Á¤È­µÈ ·¡Å°
+function purgerackie( iObject, iState, bJustEnd )
+	iIndex = SC_GetEventObjectIndex( iObject );
+	SC_RunEventObjectEvent( 2200, "3Ddata\\Event\\Object010.con", -1 );
+end
+
+-- ¹ö¼¸¾Õ ÀÌº¥Æ® 2(1-hero-03 : Á¤Ã¼ºÒ¸íÀÇ ³²ÀÚ Äù½ºÆ®)
+function mushroom2( iObject, iState, bJustEnd )
+	iIndex = SC_GetEventObjectIndex( iObject );
+	SC_RunEventObjectEvent( 2200, "3Ddata\\Event\\Object011.con", -1 );
+end
+
+-----------------------------------------------------------------------------
+-------------------------- Æ©Åä¸®¾ó °ü·Ã ½ºÅ©¸³Æ® ½ÃÀÛ ----------------------
+-----------------------------------------------------------------------------
+
+-- Åº»ýÀÇ ¼¶ »ç³É Æ©Åä¸®¾ó ½ÃÀÛ ÀÌº¥Æ®
+
+function Tutorial_Move( iObject, iState, bJustEnd )
+	SC_ShowTutorialImage("3Ddata/Tutorial/03.dds", 6, 125, 0.3, 6.5, 7, 0);
+	SC_ShowTutorialImage("3Ddata/Tutorial/04.dds", 6, 125, 0.3, 9, 10, 1);
+end
+
+-- Åº»ýÀÇ ¼¶ »ç³É Æ©Åä¸®¾ó ¿Ï·á ÀÌº¥Æ®
+
+function Tutorial_Hunt( iObject, iState, bJustEnd )
+	SC_ShowTutorialImage("3Ddata/Tutorial/05.dds", 6, 125, 0.3, 6.5, 7, 0);
+	SC_ShowTutorialImage("3Ddata/Tutorial/06.dds", 6, 125, 0.3, 9, 10, 1);
+end
+
+-- Åº»ýÀÇ ¼¶ ¾Æ·ç¾ÆÀÇ ¿äÁ¤°ú ´ëÈ­ Æ©Åä¸®¾ó ¿Ï·á ÀÌº¥Æ®
+
+function Tutorial_talk( iObject, iState, bJustEnd )
+	SC_ShowTutorialImage("3Ddata/Tutorial/07.dds", 6, 125, 0.3, 14.5, 15, 0);
+end
+
+
+-----------------------------------------------------------------------------
+------------------------ È÷¾î·Î Äù½ºÆ® °ü·Ã ½ºÅ©¸³Æ® ½ÃÀÛ -------------------
+-----------------------------------------------------------------------------
+
+-- 1-hero-01 ½ÃÀÛ ¾Æ·ç¾Æ ÀÌº¥Æ®
+
+function start_1_hero_01( iObject, iState, bJustEnd )
+	iIndex = SC_GetEventObjectIndex( iObject );
+	SC_RunEventObjectEvent( 1030, "3Ddata\\Event\\EM99-001.con", -1 );
+end
+
+-- 1-hero-02 ½ÃÀÛ ¾Æ·ç¾Æ ÀÌº¥Æ®
+
+function start_1_hero_02( iObject, iState, bJustEnd )
+	iIndex = SC_GetEventObjectIndex( iObject );
+	SC_RunEventObjectEvent( 1030, "3Ddata\\Event\\EM99-002.con", -1 );
+end
+
+-- 1-hero-03 ½ÃÀÛ ¾Æ·ç¾Æ ÀÌº¥Æ®
+
+function start_1_hero_03( iObject, iState, bJustEnd )
+	iIndex = SC_GetEventObjectIndex( iObject );
+	SC_RunEventObjectEvent( 1030, "3Ddata\\Event\\EM99-003.con", -1 );
+end
+
+-- 1-hero-03 ¿Ï·á ¾Æ·ç¾Æ ÀÌº¥Æ®
+
+function start_1_hero_03end( iObject, iState, bJustEnd )
+	iIndex = SC_GetEventObjectIndex( iObject );
+	SC_RunEventObjectEvent( 1030, "3Ddata\\Event\\EM99-004.con", -1 );
+end

@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/quest
+END
+QuestActions.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/quest/QuestActions.h
+END
+CStrStb.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/quest/CStrStb.hpp
+END
+strhashing.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/quest/strhashing.cpp
+END
+QuestTrigger.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/quest/QuestTrigger.h
+END
+QuestConditions.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/quest/QuestConditions.cpp
+END
+CIntStb.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/quest/CIntStb.hpp
+END
+QuestConditionsC.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/quest/QuestConditionsC.cpp
+END
+strhashing.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/quest/strhashing.h
+END
+CRoseArray.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/quest/CRoseArray.hpp
+END
+CRoseFile.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/quest/CRoseFile.hpp
+END
+QuestConditions.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/quest/QuestConditions.h
+END
+QuestActions.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/quest/QuestActions.cpp
+END
+Quests.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/quest/Quests.cpp
+END
+QuestActionsC.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/9/trunk/Server%20Files/World%20Server/quest/QuestActionsC.cpp
+END
